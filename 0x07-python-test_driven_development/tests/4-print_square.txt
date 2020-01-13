@@ -1,0 +1,41 @@
+'''Test cases for 4-print_quare
+"""
+	>>> ps = __import__('4-print_square').print_square
+
+	>>> ps(4)
+	####
+	####
+	####
+	####
+
+	>>> ps(10)
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+	##########
+
+	>>> ps(-4)
+	Traceback (most recent call last)
+	...
+	ValueError: size must be >= 0
+
+	>>> ps("word")
+	Traceback (most recent call last)
+	...
+	TypeError: size must be an integer
+
+	>>> ps(None)
+	Traceback (most recent call last)
+	...
+	TypeError: size must be an integer
+
+	>>> ps(-1.4)
+	Traceback (most recent call last):
+	...
+	TypeError: size must be an integer
