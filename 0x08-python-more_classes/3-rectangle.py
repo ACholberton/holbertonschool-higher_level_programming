@@ -45,3 +45,5 @@ class Rectangle:
                 string += "\n"
             string = string[:-1]
             return string
+        else:
+            return "" 
