@@ -1,0 +1,23 @@
+'''Test cases for 7-base_geometry'''
+
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+	>>> BG = BaseGeometry()
+	>>> BG.integer_validaror("cool", 12)
+
+	>>> BG.integer_validator("power", 77)
+
+	>>> BG.integer_validator("Omega", "yeet")
+	Traceback (most recent call last):
+	...
+	TypeError: name must be an integer
+
+	>>> BG.integer_validator("Level", 0)
+	Traceback (most recent call last):
+	...
+	ValueError: Level must be greater than 0
+
+	>>> BG.integer_validator("Hoisin", -3)
+	Traceback (most recent call last):
+	...
+	TypeError: Hoisin must be an integer
