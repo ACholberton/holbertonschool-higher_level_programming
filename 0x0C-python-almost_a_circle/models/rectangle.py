@@ -22,7 +22,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        return self.__heigth
+        return self.__height
 
     @height.setter
     def height(self, value):
@@ -65,3 +65,20 @@ class Rectangle(Base):
         for b in range(self.__height):
             print(" " * self.__x, end="")
             print("#" * self.__width)
+
+    def __str__(self):
+        rec = "[Rectangle] ({}) {}/{} - {}/{}"
+        return rec.format(self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args):
+        arg_len = len(args)
+        if arg_len >= 1:
+            self.id = args[0]
+        if arg_len >= 2:
+            self.width = args[1]
+        if arg_len >= 3:
+            self.height = args[2]
+        if arg_len >= 4:
+            self.x = args[3]
+        if arg_len >= 5:
+            self.y = args[4]
