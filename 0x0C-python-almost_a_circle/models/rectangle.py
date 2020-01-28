@@ -88,16 +88,29 @@ class Rectangle(Base):
         rec = "[Rectangle] ({}) {}/{} - {}/{}"
         return rec.format(self.id, self.x, self.y, self.width, self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ Update method"""
         arg_len = len(args)
-        if arg_len >= 1:
-            self.id = args[0]
-        if arg_len >= 2:
-            self.width = args[1]
-        if arg_len >= 3:
-            self.height = args[2]
-        if arg_len >= 4:
-            self.x = args[3]
-        if arg_len >= 5:
-            self.y = args[4]
+        if arg_len > 0:
+            if arg_len >= 1:
+                self.id = args[0]
+            if arg_len >= 2:
+                self.width = args[1]
+            if arg_len >= 3:
+                self.height = args[2]
+            if arg_len >= 4:
+                self.x = args[3]
+            if arg_len >= 5:
+                self.y = args[4]
+        elif kwargs is not None:
+            for key, value in kwargs.items():
+                if key == "id":
+                    self.id = value
+                if key == "width":
+                    self.width = value
+                if key == "height":
+                    self.height = value
+                if key == "x":
+                    self.x = value
+                if key == "y":
+                    self.y = value
