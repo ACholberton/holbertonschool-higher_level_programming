@@ -1,10 +1,12 @@
-#!usr/bin/python3
-"""Class Square"""
+#!/usr/bin/python3
+"""Import rectangle from rectangle.py"""
 
 from models.rectangle import Rectangle
+"""Class Square"""
 
 
 class Square(Rectangle):
+    """Class Square"""
     def __init__(self, size, x=0, y=0, id=None):
         """Class initiator"""
         super().__init__(size, size, x, y, id)
