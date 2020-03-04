@@ -1,4 +1,5 @@
--- This Script creates a user with all priviledges
+-- Script creates a user and sets all privileges
 
-CREATE USER IF NOT EXISTS 'user_0d_1'@'localhost' INDENTIFIED BY 'user_0d_1_pwd';
+CREATE USER IF NOT EXISTS 'user_0d_1'@'localhost';
+SET PASSWORD FOR 'user_0d_1'@'localhost' = 'user_0d_1_pwd';
 GRANT ALL PRIVILEGES ON *.* TO 'user_0d_1'@'localhost';
