@@ -9,20 +9,20 @@ from sys import argv
 
 
 if __name__ == "__main__":
-    host = "localhost"
-    port = 3306
-    user = argv[1]
+    host_name = "localhost"
+    port_name = 3306
+    user_name = argv[1]
     passwd = argv[2]
     database = argv[3]
 
-    db = MySQLdb.connect(host=host, port=port, user=user,
-                               passwd=passwd, db=database)
+    db = MySQLdb.connect(host=host_name, port=port_name, user=user_name,
+                         passwd=passwd, db=database)
 
     cur = db.cursor()
 
     cur.execute("SELECT * FROM states ORDER BY states.id;")
     rows = cur.fetchall()
-    for state in rows:
+    for states in rows:
         print(states)
 
     cur.close()
