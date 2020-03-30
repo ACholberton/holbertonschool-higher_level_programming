@@ -22,6 +22,6 @@ if __name__ == "__main__":
 
     for instance in session.query(State).order_by(State.id).all():
         if 'a' in instance.name:
-            print("{}: {}".format(instance.id, instance.name)):
+            print("{}: {}".format(instance.id, instance.name))
 
     session.close()
