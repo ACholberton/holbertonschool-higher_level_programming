@@ -7,6 +7,7 @@ Base = declarative_base():
 from sqlalchemy import Column
 from sqlalchemy import Integer
 from sqlalchemy import String
+from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
