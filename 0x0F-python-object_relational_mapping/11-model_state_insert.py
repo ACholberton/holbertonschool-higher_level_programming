@@ -25,7 +25,7 @@ if __name__ == "__main__":
 
     instance = session.query(State).filter(State.name == "Louisiana").first()
     if instance is not None:
-        print("{}".format(instance.id)
+        print("{}".format(instance.id))
     else:
         print("Not found")
 
