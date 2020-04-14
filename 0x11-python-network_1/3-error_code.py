@@ -10,10 +10,8 @@ import sys
 
 
 def urllib_errorcode():
-    url = sys.argv[1]
-
     try:
-        with urllib.request.urlopen(url) as response:
+        with urllib.request.urlopen(sys.argv[1]) as response:
             print(response.read().decode("uft-8"))
     except urllib.error.HTTPError as e:
         print("Error code: {}".format(e.code))
