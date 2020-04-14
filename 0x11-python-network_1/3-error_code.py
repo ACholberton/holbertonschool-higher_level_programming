@@ -15,3 +15,6 @@ def urllib_errorcode():
             print(response.read().decode("uft-8"))
     except urllib.error.HTTPError as e:
         print("Error code: {}".format(e.code))
+
+if __name__ == '__main__':
+    urllib_errorcode():
