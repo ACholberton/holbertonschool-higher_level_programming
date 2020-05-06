@@ -15,7 +15,7 @@ if (list === 3 || list === 2) {
       arr.push(arg);
     }
   }
-  arr.sort()
+  arr.sort();
   arr.pop();
   console.log(Math.max.apply(null, arr));
 }
