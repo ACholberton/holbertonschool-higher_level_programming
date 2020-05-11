@@ -14,10 +14,11 @@ class Rectangle {
   print () {
     let x = '';
     for (let a = 0; a < this.height; a++) {
-      x += 'X';
-    }
-    for (let b = 0; b < this.width; b++) {
+      for (let b = 0; b < this.width; b++) {
+        x += 'X';
+      }
       console.log(x);
+      x = '';
     }
   }
 }
