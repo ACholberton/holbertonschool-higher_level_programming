@@ -28,7 +28,8 @@ class Rectangle {
     this.height = this.width;
     this.width = temp;
   }
-// method double //
+
+  // method double //
   double () {
     this.height = this.height * 2;
     this.width = this.width * 2;
